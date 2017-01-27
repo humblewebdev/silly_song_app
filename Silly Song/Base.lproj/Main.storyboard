@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Generate A Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx8-qg-PWW">
+                                <rect key="frame" x="80" y="28" width="215" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="323" id="GQJ-F4-f8N"/>
+                                    <constraint firstAttribute="height" constant="118" id="Wzg-Vg-jGI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7aZ-FB-idx">
+                                <rect key="frame" x="67" y="214" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FmA-E4-KR8"/>
+                                    <constraint firstAttribute="height" constant="128" id="wYh-z6-uHW"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frF-ZG-KY9">
+                                <rect key="frame" x="16" y="160" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="BxT-ol-uGo"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="pwV-pG-ZeF"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.079617221833596208" green="0.7808807422193369" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="frF-ZG-KY9" secondAttribute="trailing" id="1bh-Hf-gq2"/>
+                            <constraint firstItem="frF-ZG-KY9" firstAttribute="top" secondItem="bx8-qg-PWW" secondAttribute="bottom" constant="22" id="8RL-Sw-GJn"/>
+                            <constraint firstItem="bx8-qg-PWW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DLS-IF-b11"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="frF-ZG-KY9" secondAttribute="leading" id="JWE-ZW-Z8Y"/>
+                            <constraint firstItem="bx8-qg-PWW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WTd-NO-yw2"/>
+                            <constraint firstItem="7aZ-FB-idx" firstAttribute="top" secondItem="frF-ZG-KY9" secondAttribute="bottom" constant="24" id="iLf-iC-xL0"/>
+                            <constraint firstItem="7aZ-FB-idx" firstAttribute="centerX" secondItem="frF-ZG-KY9" secondAttribute="centerX" id="qLg-EH-db4"/>
+                            <constraint firstItem="frF-ZG-KY9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zd8-ja-eLZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="7aZ-FB-idx" id="Tb5-hF-sRv"/>
+                        <outlet property="nameField" destination="frF-ZG-KY9" id="kWZ-Se-2I1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
