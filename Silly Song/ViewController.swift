@@ -25,17 +25,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func reset(_ sender: Any) {
+    @IBAction func reset(_ sender: UITextField) {
         lyricsView.text = ""
         nameField.text = ""
     }
 
-    @IBAction func displayLyrics(_ sender: Any) {
+    @IBAction func displayLyrics(_ sender: UITextField) {
         if (!(nameField.text?.isEmpty)!) {
             lyricsView.text = lyricsFromName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
         }
